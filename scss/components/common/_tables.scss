@@ -1,0 +1,99 @@
+.table{
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	th{
+		padding: 15px 20px;
+		height: 64px;
+		background: #975a44;
+		color: #fff;
+		font-size: 13px;
+		line-height: 16px;
+		text-align: center;
+		font-weight: 400;
+
+		&.big{
+			font-size: 18px;
+			line-height: 24px;
+			font-family: $second-font;
+			text-align: left;
+			font-weight: bold;
+		}
+
+		&:first-child{
+			position: relative;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 18px;
+				height: 100%;
+				background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 18 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M18 64h-5l2.15-9.77L11 57 0 32 11 8l4.56 3.8L13 0h5v64z' fill='%23975A44'/%3e%3c/svg%3e") no-repeat center center;
+				background-size: contain;
+				position: absolute;
+				left: -17px;
+				top: 0;
+			}
+		}
+
+		&:last-child{
+			position: relative;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 18px;
+				height: 100%;
+				background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 18 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M18 64h-5l2.15-9.77L11 57 0 32 11 8l4.56 3.8L13 0h5v64z' fill='%23975A44'/%3e%3c/svg%3e") no-repeat center center;
+				background-size: contain;
+				position: absolute;
+				right: -17px;
+				top: 0;
+				transform: rotate(-180deg);
+			}
+		}
+
+		@media screen and (max-width: 767px){
+			height: auto;
+		}
+	}
+
+	td{
+		border-bottom: 1px solid #eee;
+		// height: 64px;
+		vertical-align: middle;
+		padding: 15px 20px;
+		color: $text-dark;
+		margin: 0;
+		text-align: center;
+
+		&.big{
+			font-size: 18px;
+			line-height: 24px;
+			font-family: $second-font;
+			text-align: left;
+		}
+
+		@media screen and (max-width: 767px){
+			height: auto;
+		}
+	}
+}
+
+.scrollable-container{
+	width: 100%;
+
+	@media screen and (max-width: 767px){
+		overflow-x: auto;
+		padding: 0 18px;
+
+		.table{
+			min-width: 700px;
+		}
+	}
+}

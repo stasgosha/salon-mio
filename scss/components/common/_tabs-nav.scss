@@ -1,0 +1,81 @@
+.tabs-nav{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	white-space: nowrap;
+
+	> li{
+		margin-right: 20px;
+		// flex: auto;
+
+		&:last-child{
+			margin-right: 0 !important;
+		}
+
+		> button{
+			display: block;
+			width: 100%;
+			font-size: 14px;
+			line-height: 55px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: $brown;
+			position: relative;
+			padding: 0 10px;
+
+			&:after{
+				content: '';
+				display: block;
+				transition: all $t;
+				height: 2px;
+				background: $primary;
+				position: absolute;
+				left: 0;
+				bottom: 1px;
+				width: 0;
+			}
+
+			&:hover,
+			&:focus{
+				color: $primary;
+				outline: none;
+
+				&:after{
+					width: 100%;
+				}
+			}
+
+			@media screen and (max-width: 991px){
+				font-size: 12px;
+				padding: 0 5px;
+			}
+		}
+
+		&.current{
+			> button{
+				color: $primary;
+
+				&:after{
+					width: 100%;
+				}
+			}
+		}
+
+		@media screen and (max-width: 1199px){
+			margin-right: 10px;
+		}
+	}
+
+	&.justify-center{
+		justify-content: center;
+
+		> li{
+			flex: none;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		justify-content: flex-start;
+	}
+}

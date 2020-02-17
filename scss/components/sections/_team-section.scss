@@ -1,0 +1,268 @@
+.team-section{
+	padding: 110px 0 50px;
+
+	@media screen and (max-width: 767px){
+		&.sm-small-top-padding{
+			padding-top: 50px;
+		}
+	}
+}
+
+.team-slider-component{
+	display: flex;
+	flex-direction: column;
+
+	.cmp-header{
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 25px;
+
+		@media screen and (max-width: 767px){
+			margin-bottom: 0;
+		}
+
+		@media screen and (max-width: 575px){
+			order: 2;
+			margin-bottom: 20px;
+		}
+	}
+
+	.cmp-main{
+		display: flex;
+		width: 100%;
+		margin-bottom: 16px;
+
+		.cmp-text{
+			margin-right: 20px;
+			width: 180px;
+			flex: none;
+		}
+
+		.cmp-slider{
+			width: calc(100% - 180px - 20px);
+		}
+
+		@media screen and (max-width: 575px){
+			flex-direction: column;
+
+			.cmp-text{
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+
+			.cmp-slider{
+				width: 100%;
+			}
+		}
+	}
+
+	.section-caption{
+		margin-bottom: 25px;
+	}
+
+	.team-slider{
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+		margin-bottom: 0 !important;
+
+		@media screen and (max-width: 1199px){
+			width: calc(100% + 10px * 2);
+			margin-left: -10px;
+			margin-right: -10px;
+
+			.slide{
+				padding: 15px 10px;
+			}
+		}
+	}
+
+	.cmp-footer{
+		display: flex;
+		align-items: center;
+
+		.arrows{
+			width: 200px;
+			position: relative;
+		}
+
+		.dots{
+			width: calc(100% - 200px);
+			position: relative;
+		}
+
+		@media screen and (max-width: 575px){
+			order: 3;
+
+			.arrows{
+				width: 145px;
+			}
+
+			.dots{
+				width: calc(100% - 145px);
+			}
+		}
+	}
+
+	.arrows{
+		display: flex;
+
+		.slick-arrow{
+			position: static;
+			background: url(../img/icons-sprite.png);
+			background-position: -1px -0px;
+			width: 40px;
+			height: 12px;
+			transform: translateY(0);
+
+			&:before{
+				display: none;
+			}
+
+			&.slick-prev{
+				transform: rotate(-180deg);
+			}
+
+			&.slick-next{
+				margin-left: 34px;
+			}
+
+			&:hover{
+				opacity: .7;
+			}
+		}
+	}
+
+	.dots{
+		.slick-dots{
+			position: static;
+			width: 100%;
+			display: flex !important;
+
+			li{
+				flex: auto;
+				width: auto;
+				height: 2px;
+				position: relative;
+				margin: 0;
+
+				button{
+					display: block;
+					width: 100%;
+					height: 100%;
+					padding: 0;
+					background: #f0f0f0;
+					transition: all $t;
+					transform: none;
+
+					&:before{
+						display: none;
+					}
+				}
+
+				&.slick-active{
+					button{
+						background: $dark;
+					}
+				}
+			}
+		}
+	}
+}
+
+.more-btn{
+	padding-right: 45px;
+	position: relative;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 2;
+	color: #261d17;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+
+	&:after{
+		content: '';
+		display: block;
+		width: 26px;
+		height: 9px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		background: url(../img/icons/arrow-right-thin.png) no-repeat;
+	}
+
+	&:hover{
+		color: $primary;
+	}
+}
+
+.team-card{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: #fff;
+
+	.card-photo{
+		position: relative;
+		background: #e8e8e8;
+		flex: none;
+		transition: all $t;
+
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 131.81%;
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: block;
+			max-width: 95%;
+			max-height: calc(100% - 10px);
+			object-fit: contain;
+			object-position: center bottom;
+			font-family: 'object-fit: contain; object-position: center bottom;';
+		}
+	}
+
+	.card-content{
+		flex: auto;
+		text-align: center;
+		color: $text-dark;
+		padding: 20px 10px;
+		border-bottom: 2px solid transparent;
+		transition: all $t;
+	}
+
+	.card-caption{
+		font-size: 17px;
+		line-height: 24px;
+		letter-spacing: 0.05em;
+		font-weight: 500;
+	}
+
+	p{
+		font-size: 15px;
+		line-height: 24px;
+	}
+
+	&:hover,
+	&:focus{
+		outline: none;
+		box-shadow: 3px 3px 15px rgba(#000, .17);
+
+		.card-photo{
+			background: #d1d1d1;
+		}
+
+		.card-content{
+			border-bottom-color: $primary;
+		}
+	}
+}

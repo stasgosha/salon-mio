@@ -1,0 +1,38 @@
+.prices-section{
+	padding: 0 0 120px;
+
+	.section-caption{
+		margin-bottom: 30px;
+	}
+
+	.section-nav{
+		margin-bottom: 45px;
+	}
+
+	.section-inner{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.section-sidebar{
+		margin-right: 30px;
+		width: 270px;
+		flex: none;
+	}
+
+	.section-content{
+		flex: auto;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			flex-direction: column-reverse;
+
+			.section-sidebar{
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

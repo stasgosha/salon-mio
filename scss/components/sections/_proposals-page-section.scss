@@ -1,0 +1,26 @@
+.proposals-page-section{
+	padding: 0 0 120px;
+
+	@media screen and (max-width: 767px){
+		padding-bottom: 50px;
+	}
+
+	.section-caption{
+		margin-bottom: 30px;
+	}
+
+	.section-text{
+		width: 100%;
+		max-width: 920px;
+		margin: 0 auto 35px;
+		text-align: center;
+	}
+
+	.tabs-nav{
+		margin-bottom: 35px;
+	}
+
+	.tabs-container .cards-list{
+		margin-bottom: 0 !important;
+	}
+}

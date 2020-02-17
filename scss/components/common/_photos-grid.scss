@@ -1,0 +1,83 @@
+.photos-grid{
+	width: calc(100% + 15px * 2);
+	margin-left: -15px;
+	margin-right: -15px;
+	display: flex;
+	flex-wrap: wrap;
+
+	.column{
+		padding: 0 15px;
+		width: 33.333%;
+
+		.item{
+			margin-bottom: 30px;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		width: calc(100% + 10px * 2);
+		margin-left: -10px;
+		margin-right: -10px;
+
+		.column{
+			padding: 0 10px;
+
+			.item{
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		width: calc(100% + 3px * 2);
+		margin-left: -3px;
+		margin-right: -3px;
+
+		.column{
+			padding: 0;
+			width: 100%;
+			display: flex;
+
+			.item{
+				margin-bottom: 6px;
+				width: 50%;
+				padding: 0 3px;
+			}
+		}
+	}
+}
+
+.photo-card{
+	position: relative;
+	display: block;
+
+	&:before{
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+
+	&.tall{
+		&:before{
+			padding-top: 116.216%;
+
+			@media screen and (max-width: 575px){
+				padding-top: 100%;
+			}
+		}
+	}
+
+	img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&:hover{
+		box-shadow: 0 5px 10px rgba(#000, .3);
+	}
+}

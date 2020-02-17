@@ -1,0 +1,86 @@
+.contacts-page-section{
+	padding: 110px 0;
+
+	@media screen and (max-width: 767px){
+		padding: 50px 0;
+	}
+
+	.section-inner{
+		display: flex;
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+
+		.section-contacts,
+		.section-content{
+			padding: 0 15px;
+			width: 50%;
+		}
+
+		@media screen and (max-width: 991px){
+			flex-direction: column-reverse;
+
+			.section-contacts,
+			.section-content{
+				width: 100%;
+			}
+
+			.section-content{
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.section-contacts-list{
+		display: flex;
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+		margin-bottom: -35px;
+		flex-wrap: wrap;
+
+		.item{
+			padding: 0 15px;
+			width: 50%;
+			margin-bottom: 35px;
+		}
+
+		@media screen and (max-width: 575px){
+			.item{
+				width: 100%;
+			}
+		}
+	}
+
+	.tpg-h2{
+		margin-bottom: 20px;
+	}
+}
+
+.contact-block{
+	display: flex;
+	align-items: center;
+
+	.block-icon{
+		width: 40px;
+		flex: none;
+		margin-right: 10px;
+
+		i{
+			display: block;
+		}
+	}
+
+	.block-content{
+		a:not(.btn),
+		a:not(.text-btn){
+			color: inherit;
+			line-height: 20px;
+			display: block;
+
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+}

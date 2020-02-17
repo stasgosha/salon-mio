@@ -1,0 +1,28 @@
+.our-works-section{
+	padding: 50px 0 120px;
+
+	@media screen and (max-width: 767px){
+		padding-bottom: 50px;
+	}
+
+	.section-caption{
+		margin-bottom: 30px;
+	}
+
+	.section-text{
+		width: 100%;
+		max-width: 810px;
+		margin: 0 auto 35px;
+		text-align: center;
+	}
+
+	.section-photos{
+		.tabs-nav{
+			margin-bottom: 40px;
+		}
+	}
+
+	.section-button{
+		padding-top: 10px;
+	}
+}

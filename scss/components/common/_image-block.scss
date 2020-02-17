@@ -1,0 +1,38 @@
+.image-block{
+	width: 100%;
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: center center;
+		font-family: 'object-fit: cover; object-position: center center;';
+	}
+
+	&.two-images{
+		display: flex;
+		justify-content: space-between;
+
+		img{
+			width: calc(50% - 15px);
+			flex: none;
+
+			&:first-child{
+				margin-bottom: 60px;
+			}
+
+			&:last-child{
+				margin-top: 60px;
+			}
+
+			@media screen and (max-width: 991px){
+				width: calc(50% - 10px);
+			}
+
+			@media screen and (max-width: 767px){
+				width: calc(50% - 5px);
+			}
+		}
+	}
+}
